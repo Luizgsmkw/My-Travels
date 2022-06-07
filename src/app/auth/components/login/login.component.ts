@@ -52,6 +52,18 @@ export class LoginComponent implements OnInit {
       )
       .subscribe();
   }
+  onLoginFace() {
+    this.authService
+      .loginFace()
+      .pipe(
+        this.toast.observe({
+          success: 'Seja Bem vindo(a) ao Diario de Viagens!',
+          error: 'Operação cancelada',
+          loading: 'Fazendo login...',
+        })
+      )
+      .subscribe();
+  }
 
   ngOnInit(): void { }
 }
