@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
   siteKey: string;
   hide = true;
 
-
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     senha: ['', [Validators.required, Validators.minLength(8)]],
@@ -25,9 +24,7 @@ export class LoginComponent implements OnInit {
     private toast: HotToastService
   ) {
     this.siteKey = '6LfoD0AgAAAAADF-oTfJHI2o7gzEu7i3l1gaeQKy';
-   }
-
-
+  }
 
   onSubmit() {
     const { email, senha } = this.loginForm.value;
@@ -35,7 +32,7 @@ export class LoginComponent implements OnInit {
       .loginEmail(email, senha)
       .pipe(
         this.toast.observe({
-          success: 'Login efetuado',
+          success: 'Seja Bem vindo(a) ao Diario de Viagens!',
           error: 'Um erro ocorreu',
           loading: 'Fazendo login...',
         })
@@ -48,7 +45,7 @@ export class LoginComponent implements OnInit {
       .loginGoogle()
       .pipe(
         this.toast.observe({
-          success: 'Login efetuado',
+          success: 'Seja Bem vindo(a) ao Diario de Viagens!',
           error: 'Operação cancelada',
           loading: 'Fazendo login...',
         })
