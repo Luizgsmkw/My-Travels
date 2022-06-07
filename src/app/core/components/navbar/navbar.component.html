@@ -3,9 +3,11 @@
   <span class="spacer"></span>
   <div *ngIf="logged$ | async; else unlogged" class="link-area">
     <a mat-button routerLink="/diarios">Diários</a>
+    <span class="log" >{{log.email}} </span>
     <button mat-icon-button (click)="logout()">
       <mat-icon>logout</mat-icon>
     </button>
+   
   </div>
   <ng-template #unlogged>
     <div class="link-area">

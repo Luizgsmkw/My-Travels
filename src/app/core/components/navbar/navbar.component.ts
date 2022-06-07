@@ -11,27 +11,30 @@ import { HotToastService } from '@ngneat/hot-toast';
 export class NavbarComponent implements OnInit {
   classesColor: string = "primary";
   ativo: boolean = true;
-  
+
   constructor(
     private authService: AuthService,
     private toast: HotToastService
-    
-    ) {}
+
+  ) { }
 
   logged$?: Observable<any>;
+  log: any;
 
   logout() {
     this.authService.logout('/login')
-    .pipe(
-      this.toast.observe({
-        success: 'Volte logo!',
-      })
-    )
-    .subscribe();
+      .pipe(
+        this.toast.observe({
+          success: 'Volte logo!',
+        })
+      )
+      .subscribe();
   }
 
   ngOnInit(): void {
     this.logged$ = this.authService.logged;
+    this.authService.logged.subscribe
+      (valor => {this.log = valor;})
   }
 
   onToggle() {
