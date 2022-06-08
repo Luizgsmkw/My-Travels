@@ -5,93 +5,61 @@
     <mat-form-field appearance="fill">
       <mat-label>Nome</mat-label>
       <input matInput placeholder="Seu nome" formControlName="nome" required />
-      <mat-error *ngIf="signupForm.get('nome')?.errors?.['required']"
-        >Campo obrigatório</mat-error
-      >
+      <mat-error *ngIf="signupForm.get('nome')?.errors?.['required']">Campo obrigatório</mat-error>
       <mat-icon matPrefix>person</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Seu título</mat-label>
-      <input
-        matInput
-        placeholder="Ex: Apreciador de cuscuz"
-        formControlName="nick"
-        required
-      />
-      <mat-error *ngIf="signupForm.get('nick')?.errors?.['required']"
-        >Campo obrigatório</mat-error
-      >
+      <input matInput placeholder="Ex: Apreciador de cuscuz" formControlName="nick" required />
+      <mat-error *ngIf="signupForm.get('nick')?.errors?.['required']">Campo obrigatório</mat-error>
       <mat-icon matPrefix>person</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
-      <input
-        matInput
-        placeholder="Seu email"
-        formControlName="email"
-        required
-      />
-      <mat-error *ngIf="signupForm.get('email')?.errors?.['required']"
-        >Campo obrigatório</mat-error
-      >
-      <mat-error *ngIf="signupForm.get('email')?.errors?.['email']"
-        >Email inválido</mat-error
-      >
+      <input matInput placeholder="Seu email" formControlName="email" required />
+      <mat-error *ngIf="signupForm.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
+      <mat-error *ngIf="signupForm.get('email')?.errors?.['email']">Email inválido</mat-error>
       <mat-icon matPrefix>email</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Senha</mat-label>
-      <input
-        matInput
-        placeholder="Sua senha"
-        formControlName="senha"
-        [type]="hide ? 'password' : 'text'"
-        required
-      />
-      <button type="button"
-        mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <input matInput placeholder="Sua senha" formControlName="senha" [type]="hide ? 'password' : 'text'" required />
+      <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
-      <mat-error *ngIf="signupForm.get('senha')?.errors?.['required']"
-        >Campo obrigatório</mat-error
-      >
-      <mat-error *ngIf="signupForm.get('senha')?.errors?.['minlength']"
-        >O mínimo são 8 caracteres
+      <mat-error *ngIf="signupForm.get('senha')?.errors?.['required']">Campo obrigatório</mat-error>
+      <mat-error *ngIf="signupForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres
       </mat-error>
       <mat-icon matPrefix>key</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Confirmar senha</mat-label>
-      <input
-        matInput
-        placeholder="Confirmar senha"
-        formControlName="confirma_senha"
-        [type]="hide ? 'password' : 'text'"
-      />
-      <button type="button"
-        mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <input matInput placeholder="Confirmar senha" formControlName="confirma_senha"
+        [type]="hide ? 'password' : 'text'" />
+      <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
       <mat-icon matPrefix>key</mat-icon>
     </mat-form-field>
-    <span
-      class="mat-error"
-      *ngIf="signupForm.errors?.['matchPasswords'] && signupForm.get('confirma_senha')?.touched"
-    >
+    <span class="mat-error" *ngIf="signupForm.errors?.['matchPasswords'] && signupForm.get('confirma_senha')?.touched">
       As senhas não correspondem
     </span>
+    <!-- Adicionar validação de checkbox -->
+    <div>
+      <input type="checkbox" id="privacidade" name="privacidade">
+      <label for="privacidade">Li e Concordo com os </label>
+      <a class="privacidade" routerLink="/privacidade">Termos de Privacidade</a>
+    </div>
+    <!-- Adicionar validação de checkbox -->
     <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
     </ngx-recaptcha2>
     <button mat-raised-button color="primary" [disabled]="signupForm.invalid">
       Cadastrar
     </button>
     <span>ou</span>
-    <button
-      (click)="onLoginGoogle()"
-      type="button"
-      mat-raised-button
-      color="warn"
-    >
+    <button (click)="onLoginGoogle()" type="button" mat-raised-button color="warn">
       Entrar com o google
     </button>
     <hr>
