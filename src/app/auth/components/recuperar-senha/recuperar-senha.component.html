@@ -9,7 +9,7 @@
       <input matInput placeholder="Seu email" type="email" name="email" [(ngModel)]="email" required />
       <mat-icon matPrefix>email</mat-icon>
     </mat-form-field>
-    <button mat-raised-button color="primary" [disabled]="form.invalid">
+    <button mat-raised-button color="primary" matTooltipPosition="right" matTooltip="Enviar" [disabled]="form.invalid">
       Enviar
     </button>
   </form>
