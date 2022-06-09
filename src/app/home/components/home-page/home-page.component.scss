@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.fotos {
+    display: flex;
+    align-items: center;
+}
+
+.fotos-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.fotos-texto h2 {
+    font-size: 40px;
+    padding-top: 50px;
+    width: 400px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.fotos-texto p {
+    text-align: center;
+    font-size: 14px;
+    width: 287.06px;
+    color: #797578;
+}
+
+.button1, .button2 {
+    border: 0;
+    background-color: #F27C38;
+    width: 212px;
+    height: 45px;
+    /* padding: 12px 25px; */
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+
+
+.section-2 {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+
+.fotos-2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 113px;
+}
+
+.fotos-2 img {
+    width: 234px;
+    height: 269px;
+    margin-left: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-bottom: 37px;
+}
+
+.linha {
+    height: 1px;
+    background-color: #F27C38;
+    width: 372px;
+}
+
+.image h6 {
+    font-family: Roboto;
+    font-style: Bold;
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: Top;
+    color: #F27C38;
+    padding: 0px 40px ;
+}
+
+
+
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.mala {
+    width: 616px;
+    height: 364px;
+    background-color: rgba(242, 124, 56, 0.5);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.mala img {
+    width: 566px;
+    height: 314px;
+    border-radius: 10px;
+}
+
+.infos-text {
+    padding-top: 100px;
+    display: flex;
+    width: 420px;
+    flex-direction: column;
+    height: 600px;
+    align-items: flex-start;
+    margin-right: 90px;
+}
+
+.infos-text h3 {
+    width: 420px;
+    Font-style: Bold;
+    font-size: 32px;
+    Line-height: 38px;
+    Line-height: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    vertical-align: top;
+    
+}
+
+.infos-text p {
+    width: 398px;
+   font-size: 14px;
+   line-height: 18px;
+   text-align: left;
+   vertical-align: top;
+   margin-bottom: 33px;
+} 
+
+.button2 {
+  margin: auto;
+}
+
+.infos-text img {
+    width: 384px;
+    height: 172px;
+    margin: auto;
+    margin-top: -70px;
+    
+}
+
+footer {
+    height: 344px;
+    background-image: linear-gradient(to top, #F27C38, #f27c3800);
+}
+
+.footer-dados {
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 100px;
+
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    width: 91px;
+    height: 77px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.inicio h6, .inicio p, .sobre-nos h6, .sobre-nos p {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 21.09px;
+}
+
+.inicio p, .sobre-nos p  {
+    font-weight: 400;
+}
+
+.sobre-nos {
+    display: flex;
+    width: 167px;
+    height: 230px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sobre-nos p {
+    text-align: left;
+    width: 158px;
+    height: 60px;
+}
+
+.redes img {
+ width: 324px;
+ height: 272px;
+ margin-top: -100px ;
+}
+
+.redes-sociais img {
+  width: 29px;
+  height: 29px;
+}
+.cop {
+    margin-top: 50px;
+   text-align: center;
+   margin-left: -30px;
+   font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    vertical-align: top;
+
+}
+
+
+

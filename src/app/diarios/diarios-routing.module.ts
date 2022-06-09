@@ -8,11 +8,7 @@ import { redirectUnauthorizedTo, canActivate } from '@angular/fire/auth-guard';
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['/login']);
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'diarios',
-    pathMatch: 'full',
-  },
+ 
   {
     path: 'diarios',
     component: DiarioListComponent,
