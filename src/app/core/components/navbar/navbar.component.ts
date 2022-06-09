@@ -9,7 +9,7 @@ import { HotToastService } from '@ngneat/hot-toast';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  classesColor: string = "primary";
+  classesColor: string = "navBar-color";
   ativo: boolean = true;
 
   constructor(
@@ -41,9 +41,9 @@ export class NavbarComponent implements OnInit {
     this.ativo = !this.ativo;
 
     if (this.ativo) {
-      this.classesColor = "primary";
+      this.classesColor = "navBar-color";
     } else {
-      this.classesColor = "accent";
+      this.classesColor = "navBar-color2";
     }
   }
 }

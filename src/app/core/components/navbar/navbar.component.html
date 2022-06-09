@@ -1,4 +1,4 @@
-<mat-toolbar [color]="classesColor">
+ <mat-toolbar [ngClass]="classesColor">
   <a mat-button routerLink="/home-page"><img class="logo" src="../assets/img/logo-brancaC.png" alt=""></a>
   <span class="spacer"></span>
   <div *ngIf="logged$ | async; else unlogged" class="link-area">
@@ -18,6 +18,6 @@
   </ng-template>
   <button
     (click)="onToggle()"
-    [ngClass]="{ 'primary': ativo, ' accent': !ativo }"><mat-icon><i class="material-icons whitekIcon">format_color_fill</i></mat-icon>
+    [ngClass]="{ 'navBar-color': ativo, 'navBar-color2': !ativo }"><mat-icon><i class="material-icons whitekIcon">format_color_fill</i></mat-icon>
   </button>
 </mat-toolbar>

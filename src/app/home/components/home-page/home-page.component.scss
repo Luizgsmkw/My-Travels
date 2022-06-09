@@ -1,15 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
 
 .fotos {
+    margin-top: 127px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .fotos-texto {
@@ -26,6 +20,7 @@
     width: 400px;
     text-align: center;
     font-weight: 900;
+    line-height: 46.88px;
 }
 
 .fotos-texto p {
@@ -81,6 +76,7 @@
     align-items: center;
     height: 20px;
     margin-bottom: 37px;
+    align-items: center;
 }
 
 .linha {
@@ -90,15 +86,15 @@
 }
 
 .image h6 {
-    font-family: Roboto;
     font-style: Bold;
     font-size: 14px;
     line-height: 16px;
     line-height: 100%;
     text-align: center;
     vertical-align: Top;
+    margin-bottom: -2px;
     color: #F27C38;
-    padding: 0px 40px ;
+    padding: 0 40px ;
 }
 
 
@@ -138,10 +134,10 @@
 
 .infos-text h3 {
     width: 420px;
-    Font-style: Bold;
+    font-weight: bolder;
     font-size: 32px;
-    Line-height: 38px;
-    Line-height: 100%;
+    line-height: 38px;
+    line-height: 100%;
     margin-bottom: 20px;
     text-align: left;
     vertical-align: top;
@@ -155,6 +151,7 @@
    text-align: left;
    vertical-align: top;
    margin-bottom: 33px;
+   color: #797578;
 } 
 
 .button2 {
@@ -187,7 +184,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 91px;
-    height: 77px;
+    height: 120px;
     align-items: flex-start;
     justify-content: space-evenly;
 }
@@ -227,7 +224,7 @@ footer {
   height: 29px;
 }
 .cop {
-    margin-top: 50px;
+    margin-top: 60px;
    text-align: center;
    margin-left: -30px;
    font-size: 14px;
