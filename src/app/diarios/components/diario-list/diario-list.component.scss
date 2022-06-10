@@ -5,7 +5,36 @@
   z-index: 999;
 }
 
+.example-card {
+  width: 424px;
+  height: 700px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
 .example-header-image {
   background-image: url('https://jsl-online.com/wp-content/uploads/2017/01/placeholder-user.png');
   background-size: cover;
+}
+
+.image-diario {
+  width: 424px;
+  height: 416px;
+  object-fit: cover;
+}
+
+.comentario {
+  margin-top: -10px;
+  width: 50px;
+  color: #F27C38;
+}
+
+.example-card1 {
+  width: 424px;
+  height: 730px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
