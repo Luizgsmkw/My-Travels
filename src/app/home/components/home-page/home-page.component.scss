@@ -1,4 +1,6 @@
 
+
+
 .fotos {
     margin-top: 127px;
     display: flex;
@@ -6,6 +8,10 @@
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 .fotos-texto {
     display: flex;
     flex-direction: column;
