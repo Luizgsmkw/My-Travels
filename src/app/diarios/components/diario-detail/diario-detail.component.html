@@ -1,16 +1,29 @@
-<div *ngIf="diario$ | async as diario; else loading">
-  <mat-card class="example-card">
+<div class="diario" *ngIf="diario$ | async as diario; else loading">
+  <div class="diario-titulo">
+    <h2>{{ diario.titulo }}</h2>
+    <p>{{ diario.local }}</p>
+  </div>
+  <div class="diario-card">
+    <div class="card-img">
+      <img  mat-card-image [src]="diario.imagem" alt="Photo of a Shiba Inu" />
+    </div>
+    <div class="card-descricao">
+      <small>{{ diario.data | date }}</small>
+      <p>{{ diario.corpo }}</p>
+      <img  src="../assets/img/logo-aviaoC.png" alt="">
+    </div>
+  </div>
+  <!-- <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title>{{ diario.usuarioName }}</mat-card-title>
       <mat-card-subtitle>{{ diario.usuarioNick }}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="diario.imagem" alt="Photo of a Shiba Inu" />
     <mat-card-content>
-      <h2>{{ diario.titulo }}</h2>
-      <small>{{ diario.data | date }} | {{ diario.local }}</small>
+      <small>{{ diario.data | date }}</small>
       <p>{{ diario.corpo }}</p>
     </mat-card-content>
-  </mat-card>
+  </mat-card> -->
 </div>
 
 <ng-template #loading>
