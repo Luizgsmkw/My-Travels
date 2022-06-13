@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private toast: HotToastService
   ) {
-    this.siteKey = '6LcztWUgAAAAAB9LC6usOMEQaUJbXIYZx26EPu3h';
+    this.siteKey = '6Le-SmggAAAAAL7n2t4RHJKY3oD0x8RzFHTE5i3d';
   }
 
   onSubmit() {
