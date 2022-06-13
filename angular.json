@@ -42,7 +42,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1.5mb"
+                  "maximumError": "2.0mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -112,8 +112,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "diarios-app:build:production",
-            "firebaseProject": "diario-viagens-6c73b",
-            "firebaseHostingSite": "diario-viagens-6c73b"
+            "firebaseProject": "diario-victoria",
+            "firebaseHostingSite": "diario-victoria"
           }
         }
       }
