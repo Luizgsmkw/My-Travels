@@ -40,7 +40,7 @@ export class CadastroComponent implements OnInit {
     private authService: AuthService,
     private toast: HotToastService
   ) {
-    this.siteKey = '6LfoD0AgAAAAADF-oTfJHI2o7gzEu7i3l1gaeQKy'
+    this.siteKey = '6LcztWUgAAAAAB9LC6usOMEQaUJbXIYZx26EPu3h'
   }
 
   onSubmit() {

@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class DashboardComponent implements OnInit {
   totalPosts$?: Observable<number>;
+  totalUsers$?: Observable<number>;
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       if (matches) {
@@ -47,5 +48,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.totalPosts$ = this.dashboardService.getPostsCount();
+    this.totalUsers$ = this.dashboardService.getUsersCount();
   }
 }
