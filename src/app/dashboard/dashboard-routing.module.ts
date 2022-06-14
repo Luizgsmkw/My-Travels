@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    // canActivate: [OnlyAdminGuard],
+    canActivate: [OnlyAdminGuard],
   },
 ];
 
