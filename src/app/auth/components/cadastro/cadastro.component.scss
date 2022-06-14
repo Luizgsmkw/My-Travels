@@ -1,0 +1,64 @@
+.body {
+    background-image: url(../../../../assets/img/fundo-login.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding: 30px;
+    background-color: #F5EFEC;
+    border-radius: 10px;
+    border: solid 1px #f27C38;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+h2 {
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.nome, .titulo, .email, .senha, .confirma-senha {
+    width: 301px;
+}
+.button-cadastro {
+    width: 301px;
+    background-color: #f27C38;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.google, .facebook {
+    width: 301px;
+    background-color: white;
+    border: solid 1px #f27C38;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.google img {
+    width: 20px;
+    height: 20px;
+    margin-right: 50px;
+}
+
+.facebook img {
+    width: 23px;
+    height: 23px;
+    margin-right: 50px;
+    margin-left: -3px;
+
+}
