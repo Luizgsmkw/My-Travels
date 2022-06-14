@@ -1,41 +1,40 @@
-<body class="oioi">
-        <div class="form-wrapper container">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <h2>Login</h2>
-                <p>Seja bem-vindo(a) de volta!</p>
-                <mat-form-field appearance="fill">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="Seu email" formControlName="email" required>
-                    <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
-                    <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">Email inválido</mat-error>
-                    <mat-icon matPrefix>person</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="fill">
-                    <mat-label>Senha</mat-label>
-                    <input matInput placeholder="Sua senha" formControlName="senha" [type]="hide ? 'password' : 'text'" required>
-                    <button type="button"
-                        mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                    <mat-error *ngIf="loginForm.get('senha')?.errors?.['required']">Campo obrigatório</mat-error>
-                    <mat-error *ngIf="loginForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres</mat-error>
-                    <mat-icon matPrefix>key</mat-icon>
-                </mat-form-field>
-                    <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha" >
-                    </ngx-recaptcha2>
-                <a routerLink="/recuperar-senha">Esqueci minha senha</a>
-                <button mat-raised-button color="primary" [disabled]="loginForm.invalid"
-                matTooltipPosition="right" matTooltip="Login">Login</button>
-                <span>ou</span>
-                <button (click)="onLoginGoogle()" type="button" mat-raised-button color="warn"
-                matTooltipPosition="right" matTooltip="Entrar com o Google">
-                    Entrar com o google
+<body class="body">
+    <div class="form-wrapper container">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h2>Login</h2>
+            <mat-form-field class="email" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Seu email" formControlName="email" required>
+                <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
+                <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">Email inválido</mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="senha" appearance="fill">
+                <mat-label>Senha</mat-label>
+                <input  matInput placeholder="Sua senha" formControlName="senha" [type]="hide ? 'password' : 'text'" required>
+                <button type="button"
+                    mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
-                <hr>
-                <button (click)="onLoginFace()" type="button" mat-raised-button color="primary"
-                matTooltipPosition="right" matTooltip="Entrar com o Facebook">
-                    Entrar com o Facebook
-                </button>
-            </form>
-        </div>
+                <mat-error *ngIf="loginForm.get('senha')?.errors?.['required']">Campo obrigatório</mat-error>
+                <mat-error *ngIf="loginForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres</mat-error>
+                <mat-icon matPrefix>key</mat-icon>
+            </mat-form-field>
+                <ngx-recaptcha2 #captchaElem class="captcha" [siteKey]="siteKey" formControlName="recaptcha" >
+                </ngx-recaptcha2>
+            <a class="esqueci-senha" routerLink="/recuperar-senha">Esqueci minha senha</a>
+            <button mat-raised-button color="primary" [disabled]="loginForm.invalid"
+            matTooltipPosition="right" matTooltip="Login" class="login">Login</button>
+            <span class="ou">ou</span>
+            <button class="google" (click)="onLoginGoogle()" type="button" mat-raised-button color="warn"
+            matTooltipPosition="right" matTooltip="Entrar com o Google">
+               <img  src="../../../../assets/img/google.png" alt=""/> <span class="text-google">Entrar com o google</span>
+            </button>
+            <hr>
+            <button class="facebook" (click)="onLoginFace()" type="button" mat-raised-button color="primary"
+            matTooltipPosition="right" matTooltip="Entrar com o Facebook">
+               <img src="../../../../assets/img/face2.png" alt=""> <span>Entrar com o Facebook</span>
+            </button>
+        </form>
+    </div>
 </body>

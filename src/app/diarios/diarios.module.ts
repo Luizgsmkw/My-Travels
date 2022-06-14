@@ -9,6 +9,7 @@ import { DiarioAddComponent } from './components/diario-add/diario-add.component
 import { DiarioDetailComponent } from './components/diario-detail/diario-detail.component';
 import { DiarioEditComponent } from './components/diario-edit/diario-edit.component';
 import { DiarioListComponent } from './components/diario-list/diario-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DiarioListComponent } from './components/diario-list/diario-list.compon
     MaterialModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule
   ]
 })
 export class DiariosModule { }

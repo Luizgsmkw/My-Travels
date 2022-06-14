@@ -12,10 +12,12 @@ import Swal from 'sweetalert2'
   selector: 'app-diario-list',
   templateUrl: './diario-list.component.html',
   styleUrls: ['./diario-list.component.scss'],
+  
 })
 export class DiarioListComponent implements OnInit {
   allDiarios$?: Observable<Diario[]>;
   meusDiarios$?: Observable<Diario[]>;
+  numeroDeColunas: number = 2;
 
   constructor(
     private dialog: MatDialog,
@@ -92,4 +94,17 @@ export class DiarioListComponent implements OnInit {
     this.allDiarios$ = this.diariosService.getTodosDiarios();
     this.meusDiarios$ = this.diariosService.getDiariosUsuario();
   }
+
+  onCols(event: any) {
+ this.numeroDeColunas = (event.target.innerWidth >= 890) ? 2 : 1;
+    }
+
+
+    
+  
+
+    // onCols1(event: any) {
+    //   this.numeroDeColunas = (event.target.innerWidth >= 930) ? 2 : 1;
+    //   }
+
 }
