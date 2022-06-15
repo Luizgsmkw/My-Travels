@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       .loginEmail(email, senha)
       .pipe(
         this.toast.observe({
-          success: 'Seja Bem vindo(a) ao Diario de Viagens!',
+          success: 'Seja Bem vindo(a) ao MyTravels!',
           error: 'Um erro ocorreu',
           loading: 'Fazendo login...',
         })
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
       .loginGoogle()
       .pipe(
         this.toast.observe({
-          success: 'Seja Bem vindo(a) ao Diario de Viagens!',
+          success: 'Seja Bem vindo(a) ao MyTravels!',
           error: 'Operação cancelada',
           loading: 'Fazendo login...',
         })
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
       .loginFace()
       .pipe(
         this.toast.observe({
-          success: 'Seja Bem vindo(a) ao Diario de Viagens!',
+          success: 'Seja Bem vindo(a) ao MyTravels!',
           error: 'Operação cancelada',
           loading: 'Fazendo login...',
         })

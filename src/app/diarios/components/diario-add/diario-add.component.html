@@ -23,7 +23,7 @@
       <mat-icon matPrefix>chat</mat-icon>
     </mat-form-field>
     <input (change)="setImage($event)" #imagem type="file" name="imagem" hidden />
-    <button (click)="imagem.click()" type="button" mat-raised-button color="accent">
+    <button (click)="imagem.click()" type="button" mat-raised-button class="mat-raised-button-img">
       <div class="upload-image" *ngIf="mudar; else  uploadNotFound">
         <mat-icon>done</mat-icon>
         <span>Imagem inserida</span>
@@ -33,7 +33,7 @@
         Imagem do diário
     </ng-template>
     </button><br />
-    <button mat-raised-button color="primary" [disabled]="form.invalid">
+    <button mat-raised-button class="mat-raised-button-add" [disabled]="form.invalid">
       Adicionar
     </button>
   </div>

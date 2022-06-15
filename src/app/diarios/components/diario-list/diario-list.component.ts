@@ -78,7 +78,8 @@ export class DiarioListComponent implements OnInit {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#01A4B5',
-      cancelButtonColor: '#d33',
+      cancelButtonColor: '#F27C38',
+      confirmButtonText: 'Confirmar',
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
