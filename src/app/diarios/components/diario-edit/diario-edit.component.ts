@@ -9,7 +9,7 @@ import { Diario } from 'src/app/core/models/diario';
 })
 export class DiarioEditComponent implements OnInit {
   diario: Diario = {} as Diario;
-
+  mudar: boolean = false;
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: Diario, 
     private ref: MatDialogRef<DiarioEditComponent>
@@ -18,7 +18,7 @@ export class DiarioEditComponent implements OnInit {
   imagem?: File;
 
   setImage(ev: any) {
-    
+    this.mudar = true;
     this.imagem = ev.target.files[0];
   }
 
